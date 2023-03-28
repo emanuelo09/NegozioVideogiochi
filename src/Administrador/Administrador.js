@@ -29,7 +29,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-images"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Foto" />
                                     </div>
@@ -40,7 +40,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
+                                            <i class="bi bi-archive-fill"></i>
                                         </span>
                                         <input type="number" class="form-control" placeholder="Cantidad" />
                                     </div>
@@ -48,7 +48,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-unity"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Marca" />
                                     </div>
@@ -64,7 +64,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
+                                            <i class="bi bi-currency-dollar"></i>
                                         </span>
                                         <input type="number" class="form-control" placeholder="Precio" />
                                     </div>
@@ -72,7 +72,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-columns-gap"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Clasificacion" />
                                     </div>
@@ -83,26 +83,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
-                                        </span>
-                                        <input type="number" class="form-control" placeholder="Cantidad" />
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
-                                        </span>
-                                        <input type="text" class="form-control" placeholder="Marca" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
+                                            <i class="bi bi-clipboard2-plus-fill"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Proveedor" />
                                     </div>
@@ -110,7 +91,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-box-seam"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Presentación" />
                                     </div>
@@ -121,7 +102,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
+                                            <i class="bi bi-download"></i>
                                         </span>
                                         <input type="number" class="form-control" placeholder="Peso" />
                                     </div>
@@ -129,7 +110,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-arrows-fullscreen"></i>
                                         </span>
                                         <input type="number" class="form-control" placeholder="Volumen" />
                                     </div>
@@ -140,7 +121,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-shop"></i>
+                                            <i class="bi bi-calendar3"></i>
                                         </span>
                                         <input type="date" class="form-control" placeholder="Fecha Ingreso" />
                                     </div>
@@ -148,7 +129,7 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">
-                                            <i class="bi bi-basket"></i>
+                                            <i class="bi bi-bag-check-fill"></i>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Garantía" />
                                     </div>
@@ -165,7 +146,7 @@ export function Administrador() {
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-primary">Enviar</button>
                                 </div>
                             </div>
 
