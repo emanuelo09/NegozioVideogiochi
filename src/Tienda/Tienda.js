@@ -1,6 +1,21 @@
-
+import './Tienda.css'
+import { Link } from 'react-router-dom';
 
 export function Tienda(){
+
+    function cambiarFoto2(evento){
+
+        evento.preventDefault();
+        evento.target.classList.add("sombra");
+
+    }
+
+    function cambiarFoto(evento){
+
+        evento.preventDefault();
+        evento.target.classList.remove("sombra");
+
+    }
 
     let productos = [
         {
@@ -84,10 +99,16 @@ export function Tienda(){
                 {
                     productos.map(function(producto){
                         return(
-                            <div class="col">
+                        <Link class="col zoom texto" to="/compras">
                                 <div class="card shadow h-100">
-                                    <img src={producto.foto} alt="foto" class="img-fluid"/>
                                     <h2 class="text-light text-center fw-bold">{producto.nombre}</h2>
+                                    <img 
+                                        src={producto.foto} 
+                                        alt="foto" 
+                                        class="img-fluid sombra" 
+                                        onMouseOver={cambiarFoto} 
+                                        onMouseLeave={cambiarFoto2} 
+                                    />
                                     <p class="text-light text-center">{producto.descripcion}</p>
                                     <h3 class="text-light text-center fw-bold">${producto.precio}.00 COP
                                         <span class="col-6 text-end">
@@ -95,11 +116,13 @@ export function Tienda(){
                                         </span>
                                     </h3>
                                 </div>
-                            </div>
+                        </Link>    
                         )
                     })
                 }
             </div>
+            <br/>
+            <br/>
         </>
 
     );
