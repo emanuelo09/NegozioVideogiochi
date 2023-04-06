@@ -1,27 +1,60 @@
 import './Servicios.css'
 
-export function Servicios (){
+export function Servicios() {
 
-    return(
+    return (
 
         <>
 
-        <section class="container-fluid my-5">
-            <div class="row text-center justify-content-between">
-                <div class="col-12 col-md-3 fondo">
-                    <h2>Pagos</h2>
-                    <i class="bi bi-wallet2 fs-1"></i>
-                </div>
-                <div class="col-12 col-md-3 fondo">
-                    <h2>Servicio Tecnico</h2>
-                    <i class="bi bi-gear fs-1"></i>
-                </div>
-                <div class="col-12 col-md-3 fondo">
-                    <h2>Computadores y Consolas</h2>
-                    <i class="bi bi-display fs-1"></i>
+            <div class="wrapper1">
+                <h1>Información</h1>
+                <div class="cols">
+                    <div class="col" onTouchStart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" >
+                                <div class="inner">
+                                    <p>Metodos de Pago</p>
+
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" onTouchStart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front">
+                                <div class="inner">
+                                    <p>Reparaciones Y Garantias</p>
+
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" onTouchStart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front">
+                                <div class="inner">
+                                    <p>Productos</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
 
         </>
 

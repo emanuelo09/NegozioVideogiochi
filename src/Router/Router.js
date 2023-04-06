@@ -24,7 +24,7 @@ export function Router (){
         </Routes>
 
 
-        <footer>
+        <footer class="site-footer">
             <Footer/>
         </footer>
         </>
