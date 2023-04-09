@@ -146,7 +146,7 @@ export function Administrador() {
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-primary">Enviar</button>
+                                    <button type="button" class="btn btn-warning">Enviar</button>
                                 </div>
                             </div>
 

@@ -1,7 +1,25 @@
+.textoTitulo{
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size:35px;
+
+}
+
+.listaW{
+    list-style: none;
+}
+
 .wrapper1 {
     width: 90%;
     margin: 0 auto;
     max-width: 80rem;
+}
+
+.bordeado{
+    border-radius:10px;
+    box-shadow: 47px 45px 20px 5px rgba(41, 41, 41, 0.63), 0 55px 50px -35px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
 }
 
 .cols {

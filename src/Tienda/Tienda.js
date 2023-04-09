@@ -101,7 +101,7 @@ export function Tienda(){
                 {
                     productos.map(function(producto){
                         return(
-                        <Link class="col zoom texto" to="/compras">
+                        <Link class="col zoom texto espacio" to="/compras">
                                 <div class="card shadow h-100">
                                     <h2 class="text-light text-center fw-bold">{producto.nombre}</h2>
                                     <img 
