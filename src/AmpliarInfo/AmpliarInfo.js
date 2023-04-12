@@ -1,24 +1,29 @@
+import { useLocation } from 'react-router-dom'
 import './AmpliarInfo.css'
 
+
 export function AmpliarInfo(){
+
+    let location = useLocation();
+    let producto = location.state.producto;
+
 
     return(
         <>
 
-            <br/>
-            <br/>
-            <br/>
-            <div class="container">
+            
+
+            <div class="container mTB">
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <img 
-                            src="https://firebasestorage.googleapis.com/v0/b/negoziodivideogiochi-c4dbe.appspot.com/o/mousegamer.webp?alt=media&token=20eadfe6-3672-4927-b3bb-8a0f7ea21eda" 
+                            src={producto.foto}
                             class="img-fluid w-100" 
                             alt="foto" 
                         />
                     </div>
                     <div class="col-12 col-md-4 border p-3 rounded shadow">
-                        <h2 class="fw-bold">Logitech G903 Lightspeed</h2>
+                        <h2 class="fw-bold">{producto.nombre}</h2>
                         <i class="bi bi-star-fill text-warning fs-3 ms-1"></i>
                         <i class="bi bi-star-fill text-warning fs-3 ms-1"></i>
                         <i class="bi bi-star-fill text-warning fs-3 ms-1"></i>
@@ -28,7 +33,7 @@ export function AmpliarInfo(){
                         <span class="badge text-bg-warning mt-3">Más vendido</span>
                         <br/>
                         <br/>
-                        <h3>$560000</h3>
+                        <h3>${producto.precio}</h3>
                         <span class="badge text-bg-primary mt-3">Oferton</span>
                         <br/>
                         <h5 class="text-muted mt-3" >Hasta 48 cuotas</h5>
@@ -65,12 +70,11 @@ export function AmpliarInfo(){
                                 Añadir
                             </button>
                         </form>
+                        <p>{producto.descripcion}</p>
                     </div>
                 </div>
             </div>
-            <br/>
-            <br/>
-            <br/>
+
 
         </>
     )

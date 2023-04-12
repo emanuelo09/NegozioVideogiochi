@@ -1,6 +1,46 @@
-import './Administrador.css'
+import './Administrador.css';
+import { useState } from 'react';
 
 export function Administrador() {
+
+    const[nombre, setNombre]=useState("");
+    const[foto, setFoto]=useState("");
+    const[cantidad, setCantidad]=useState("");
+    const[marca, setMarca]=useState("");
+    const[descripcion, setDescripcion]=useState("");
+    const[precio, setPrecio]=useState("");
+    const[clasificacion, setClasificacion]=useState("");
+    const[proveedor, setProveedor]=useState("");
+    const[presentacion, setPresentacion]=useState("");
+    const[peso, setPeso]=useState("");
+    const[volumen, setVolumen]=useState("");
+    const[fechaIn, setFechaIn]=useState("");
+    const[garantia, setGarantia]=useState("");
+    const[aplicaDes, setAplicaDes]=useState("");
+
+    function procesarFormuario(evento){
+
+        evento.preventDefault();
+        let datosProducto = {
+            "nombre":nombre,
+            "foto":foto,
+            "cantidad":cantidad,
+            "marca":marca,
+            "descripcion":descripcion,
+            "precio":precio,
+            "clasificacion":clasificacion,
+            "proveedor":proveedor,
+            "presentacion":presentacion,
+            "peso":peso,
+            "volumen":volumen,
+            "fechaIn":fechaIn,
+            "garantia":garantia
+        };
+        console.log(datosProducto);
+
+    }
+
+
 
     return (
 
@@ -15,7 +55,7 @@ export function Administrador() {
                     </div>
                     <div class="col-4 card">
                         <h2 class="text-light text-center">Registro de mercancia</h2>
-                        <form>
+                        <form onSubmit={procesarFormuario}>
                             
                             <div class="row">
                                 <div class="col-6">
@@ -23,7 +63,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-shop"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Nombre" />
+                                        <input 
+                                            id="nombre" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Nombre"
+                                            onChange={(evento)=>{
+                                                setNombre(evento.target.value);
+                                            }}  
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -31,7 +79,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-images"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Foto" />
+                                        <input
+                                            id="foto" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Foto" 
+                                            onChange={(evento)=>{
+                                                setFoto(evento.target.value);
+                                            }} 
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +98,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-archive-fill"></i>
                                         </span>
-                                        <input type="number" class="form-control" placeholder="Cantidad" />
+                                        <input 
+                                            id="cantidad" 
+                                            type="number" 
+                                            class="form-control" 
+                                            placeholder="Cantidad"
+                                            onChange={(evento)=>{
+                                                setCantidad(evento.target.value);
+                                            }}  
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -50,13 +114,28 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-unity"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Marca" />
+                                        <input 
+                                            id="marca" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Marca"
+                                            onChange={(evento)=>{
+                                                setMarca(evento.target.value);
+                                            }} 
+                                        />
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <textarea 
+                                    id="descripcion" 
+                                    class="form-control" 
+                                    placeholder="Leave a comment here"
+                                    onChange={(evento)=>{
+                                        setDescripcion(evento.target.value);
+                                    }} 
+                                ></textarea>
                                 <label for="floatingTextarea">Descripción</label>
                             </div>
 
@@ -66,7 +145,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-currency-dollar"></i>
                                         </span>
-                                        <input type="number" class="form-control" placeholder="Precio" />
+                                        <input 
+                                            id="precio" 
+                                            type="number" 
+                                            class="form-control" 
+                                            placeholder="Precio"
+                                            onChange={(evento)=>{
+                                                setPrecio(evento.target.value);
+                                            }} 
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -74,7 +161,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-columns-gap"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Clasificacion" />
+                                        <input 
+                                            id="clasificacion" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Clasificacion" 
+                                            onChange={(evento)=>{
+                                                setClasificacion(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +180,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-clipboard2-plus-fill"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Proveedor" />
+                                        <input 
+                                            id="proveedor" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Proveedor" 
+                                            onChange={(evento)=>{
+                                                setProveedor(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -93,7 +196,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-box-seam"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Presentación" />
+                                        <input 
+                                            id="presentacion" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Presentación" 
+                                            onChange={(evento)=>{
+                                                setPresentacion(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +215,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-download"></i>
                                         </span>
-                                        <input type="number" class="form-control" placeholder="Peso" />
+                                        <input 
+                                            id="peso" 
+                                            type="number" 
+                                            class="form-control" 
+                                            placeholder="Peso" 
+                                            onChange={(evento)=>{
+                                                setPeso(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -112,7 +231,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-arrows-fullscreen"></i>
                                         </span>
-                                        <input type="number" class="form-control" placeholder="Volumen" />
+                                        <input 
+                                            id="volumen" 
+                                            type="number" 
+                                            class="form-control" 
+                                            placeholder="Volumen" 
+                                            onChange={(evento)=>{
+                                                setVolumen(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +250,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-calendar3"></i>
                                         </span>
-                                        <input type="date" class="form-control" placeholder="Fecha Ingreso" />
+                                        <input 
+                                            id="fechaIn" 
+                                            type="date" 
+                                            class="form-control" 
+                                            placeholder="Fecha Ingreso" 
+                                            onChange={(evento)=>{
+                                                setFechaIn(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -131,7 +266,15 @@ export function Administrador() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <i class="bi bi-bag-check-fill"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Garantía" />
+                                        <input 
+                                            id="garantia" 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Garantía" 
+                                            onChange={(evento)=>{
+                                                setGarantia(evento.target.value);
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -140,13 +283,24 @@ export function Administrador() {
                                 <div class="col-6">
                                     <div class="input-group mb-3">
                                         <div class="input-group-text">
-                                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+                                            <input 
+                                                class="form-check-input mt-0" 
+                                                type="checkbox" 
+                                                value="" 
+                                                aria-label="Checkbox for following text input"
+                                            />
                                         </div>
-                                        <input type="number" placeholder="Aplica descuento" class="form-control" aria-label="Text input with checkbox"/>
+                                        <input 
+                                            id="aplicaDes" 
+                                            type="number" 
+                                            placeholder="Aplica descuento" 
+                                            class="form-control" 
+                                            aria-label="Text input with checkbox"
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-warning">Enviar</button>
+                                    <button type="submit" class="btn btn-warning">Enviar</button>
                                 </div>
                             </div>
 

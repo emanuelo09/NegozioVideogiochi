@@ -1,7 +1,15 @@
 import './Tienda.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Tienda(){
+
+    
+    function cambiarFoto(evento){
+        
+        evento.preventDefault();
+        evento.target.classList.remove("sombra");
+        
+    }
 
     function cambiarFoto2(evento){
 
@@ -10,10 +18,13 @@ export function Tienda(){
 
     }
 
-    function cambiarFoto(evento){
+    let navegador = useNavigate();
+    function pasarInformacion(producto){
 
-        evento.preventDefault();
-        evento.target.classList.remove("sombra");
+        navegador('/compras', {
+            state:{producto}
+        });
+        console.log(producto);        
 
     }
 
@@ -95,13 +106,12 @@ export function Tienda(){
     return(
 
         <>
-        <br/>
-        <br/>
-            <div class="row row-cols-1 row-cols-md-4 g-5 my-5">
+
+        <div class="row row-cols-1 row-cols-md-4 g-5 my-5 mTB">
                 {
                     productos.map(function(producto){
                         return(
-                        <Link class="col zoom texto espacio" to="/compras">
+                        <div class="col zoom texto espacio" onClick={()=>{pasarInformacion(producto)}}>
                                 <div class="card shadow h-100">
                                     <h2 class="text-light text-center fw-bold">{producto.nombre}</h2>
                                     <img 
@@ -118,13 +128,12 @@ export function Tienda(){
                                         </span>
                                     </h3>
                                 </div>
-                        </Link>    
+                        </div>    
                         )
                     })
                 }
             </div>
-            <br/>
-            <br/>
+
         </>
 
     );
