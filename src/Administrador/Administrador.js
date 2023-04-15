@@ -1,5 +1,6 @@
 import './Administrador.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { registrarProductoEnBd } from '../services/agregarProducto';
 
 export function Administrador() {
 
@@ -8,37 +9,44 @@ export function Administrador() {
     const[cantidad, setCantidad]=useState("");
     const[marca, setMarca]=useState("");
     const[descripcion, setDescripcion]=useState("");
-    const[precio, setPrecio]=useState("");
+    const[precioUnitario, setPrecioUnitario]=useState("");
     const[clasificacion, setClasificacion]=useState("");
     const[proveedor, setProveedor]=useState("");
     const[presentacion, setPresentacion]=useState("");
     const[peso, setPeso]=useState("");
     const[volumen, setVolumen]=useState("");
-    const[fechaIn, setFechaIn]=useState("");
+    const[fechaIngreso, setFechaIngreso]=useState("");
     const[garantia, setGarantia]=useState("");
-    const[aplicaDes, setAplicaDes]=useState("");
+    const[aplicaDescuento, setAplicaDescuento]=useState("");
 
     function procesarFormuario(evento){
 
         evento.preventDefault();
         let datosProducto = {
             "nombre":nombre,
-            "foto":foto,
             "cantidad":cantidad,
+            "foto":foto,
             "marca":marca,
             "descripcion":descripcion,
-            "precio":precio,
+            "precioUnitario":precioUnitario,
             "clasificacion":clasificacion,
             "proveedor":proveedor,
             "presentacion":presentacion,
             "peso":peso,
             "volumen":volumen,
-            "fechaIn":fechaIn,
-            "garantia":garantia
+            "fechaIngreso":fechaIngreso,
+            "garantia":garantia,
+            "aplicaDescuento":aplicaDescuento
         };
         console.log(datosProducto);
+        registrarProductoEnBd(datosProducto)
+        .then((respuesta)=>{
+            console.log(respuesta)
+        })
 
     }
+
+
 
 
 
@@ -151,7 +159,7 @@ export function Administrador() {
                                             class="form-control" 
                                             placeholder="Precio"
                                             onChange={(evento)=>{
-                                                setPrecio(evento.target.value);
+                                                setPrecioUnitario(evento.target.value);
                                             }} 
                                         />
                                     </div>
@@ -256,7 +264,7 @@ export function Administrador() {
                                             class="form-control" 
                                             placeholder="Fecha Ingreso" 
                                             onChange={(evento)=>{
-                                                setFechaIn(evento.target.value);
+                                                setFechaIngreso(evento.target.value);
                                             }}
                                         />
                                     </div>
@@ -282,20 +290,15 @@ export function Administrador() {
                             <div class="row">
                                 <div class="col-6">
                                     <div class="input-group mb-3">
-                                        <div class="input-group-text">
-                                            <input 
-                                                class="form-check-input mt-0" 
-                                                type="checkbox" 
-                                                value="" 
-                                                aria-label="Checkbox for following text input"
-                                            />
-                                        </div>
+                                        
                                         <input 
                                             id="aplicaDes" 
-                                            type="number" 
+                                            type="text" 
                                             placeholder="Aplica descuento" 
-                                            class="form-control" 
-                                            aria-label="Text input with checkbox"
+                                            class="form-control"
+                                            onChange={(evento)=>{
+                                                setAplicaDescuento(evento.target.value);
+                                            }} 
                                         />
                                     </div>
                                 </div>
