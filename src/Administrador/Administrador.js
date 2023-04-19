@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2' //sweetalert -> en el navegador
 import './Administrador.css';
 import { useState, useEffect } from 'react';
 import { registrarProductoEnBd } from '../services/agregarProducto';
@@ -41,7 +42,18 @@ export function Administrador() {
         console.log(datosProducto);
         registrarProductoEnBd(datosProducto)
         .then((respuesta)=>{
-            console.log(respuesta)
+            Swal.fire(
+                'Registro Exitoso',
+                'Good job',
+                'success'
+            )
+        })
+        .catch((error)=>{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No pudimos registrar el producto!'
+            })
         })
 
     }
