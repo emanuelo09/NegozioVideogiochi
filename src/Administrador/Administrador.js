@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2' //sweetalert -> en el navegador
 import './Administrador.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { registrarProductoEnBd } from '../services/agregarProducto';
 
 export function Administrador() {
@@ -55,6 +55,8 @@ export function Administrador() {
                 text: 'No pudimos registrar el producto!'
             })
         })
+
+
 
     }
 
